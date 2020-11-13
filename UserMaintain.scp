@@ -1,0 +1,24 @@
+
+CREATE OR REPLACE PROCEDURE UserMaintain (  
+  param 		TEST.TBLTTEST.USERNAME%TYPE,
+  PassWord1		TEST.TBLTTEST.PASSWORD%TYPE  
+)
+  
+AS
+ 
+   BEGIN 
+ 		INSERT INTO TEST.TBLTTEST
+		(
+		USERNAME,PASSWORD
+		)
+		VALUES
+		(
+		param,PassWord1
+		);   	
+
+     COMMIT;
+	  	
+   END UserMaintain;
+
+
+
